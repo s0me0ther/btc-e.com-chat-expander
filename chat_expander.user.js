@@ -13,6 +13,7 @@ var oObj = {
     oChatStyle: {},
     
     bExpanded : false,
+    bReduced : false,
     
     toggleExpand: function()
     {
@@ -31,6 +32,7 @@ var oObj = {
             });
             
             $('#draggable_handle').show();
+            $('#toggle_reduce').hide();
 
             oObj.bExpanded = true;
         }
@@ -40,6 +42,7 @@ var oObj = {
             {
                 $('#btce_chat').css(sKey, mValue);
             });
+            $('#btce_chat').css('height', 'auto');
 
             $.each(oObj.oChatStyle, function(sKey, mValue)
             {
@@ -52,10 +55,31 @@ var oObj = {
             $('#nChatLockIcon').css('margin-left', '260px');
             
             $('#draggable_handle').hide();
+            $('#toggle_reduce').show();
             
             $("#btce_chat").draggable("destroy");
 
             oObj.bExpanded = false;
+        }
+    },
+    
+    toggleReduce: function()
+    {
+        if(!oObj.bReduced)
+        {
+            $('#toggle_expand').hide();
+            $('#toggle_reduce').attr('src', 'http://www.famfamfam.com/lab/icons/silk/icons/application_put.png');
+            $('#nChatCon').hide();
+
+            oObj.bReduced = true;
+        }
+        else
+        {
+            $('#toggle_expand').show();
+            $('#toggle_reduce').attr('src', 'http://www.famfamfam.com/lab/icons/silk/icons/application_get.png');
+            $('#nChatCon').show();
+
+            oObj.bReduced = false;
         }
     },
     
@@ -76,10 +100,26 @@ var oObj = {
 if($('#nChatCon').length > 0)
 {
     $('#nChatCon').parent().attr('id', 'btce_chat');
-    $('#btce_chat').prepend('<div id="draggable_handle" style="display:none;cursor:move;float:left;width:670px;"><img src="http://www.famfamfam.com/lab/icons/silk/icons/arrow_out.png" /></div><div style="float:right;"><img id="toggle_expand" style="cursor:pointer;" src="http://www.famfamfam.com/lab/icons/silk/icons/application_double.png" /></div><div style="clear:both;"></div>');
+
+    var sHTML = '';
+    sHTML +=    '<div id="draggable_handle" style="display:none;cursor:move;float:left;width:650px;">';
+    sHTML +=        '<img src="http://www.famfamfam.com/lab/icons/silk/icons/arrow_out.png" />';
+    sHTML +=    '</div>';
+    sHTML +=    '<div style="float:right;">';
+    sHTML +=        '<img id="toggle_reduce" style="cursor:pointer;" src="http://www.famfamfam.com/lab/icons/silk/icons/application_get.png" />';
+    sHTML +=        '<img id="toggle_expand" style="cursor:pointer;margin-left:10px;" src="http://www.famfamfam.com/lab/icons/silk/icons/application_double.png" />';
+    sHTML +=    '</div>';
+    sHTML +=    '<div style="clear:both;"></div>';
+
+    $('#btce_chat').prepend(sHTML);
+
     $('#toggle_expand').click(function()
     {
         oObj.toggleExpand();
+    });
+    
+    $('#toggle_reduce').click(function(){
+        oObj.toggleReduce();
     });
 
     oObj.saveOriginalStyle();
