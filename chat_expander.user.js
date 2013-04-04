@@ -2,10 +2,11 @@
 // @name        btc-e chat expander
 // @namespace   btce
 // @include     https://btc-e.com/
-// @version     1
+// @version     1.001
 // @grant       none
-// @require    http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
-// @require    http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js
+// @require    https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
+// @require    https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js
+// @require    https://cdn.jsdelivr.net/jquery.cookie/1.3.1/jquery.cookie.js
 // ==/UserScript==
 
 var oObj = {
@@ -35,6 +36,8 @@ var oObj = {
             $('#toggle_reduce').hide();
 
             oObj.bExpanded = true;
+            $.cookie('bExpanded', '1', { expires: 365, path: '/' });
+            $.cookie('bReduced', '0', { expires: 365, path: '/' });
         }
         else
         {
@@ -60,6 +63,8 @@ var oObj = {
             $("#btce_chat").draggable("destroy");
 
             oObj.bExpanded = false;
+            $.cookie('bExpanded', '0', { expires: 365, path: '/' });
+            $.cookie('bReduced', '0', { expires: 365, path: '/' });
         }
     },
     
@@ -72,6 +77,8 @@ var oObj = {
             $('#nChatCon').hide();
 
             oObj.bReduced = true;
+            $.cookie('bReduced', '1', { expires: 365, path: '/' });
+            $.cookie('bExpanded', '0', { expires: 365, path: '/' });
         }
         else
         {
@@ -80,6 +87,8 @@ var oObj = {
             $('#nChatCon').show();
 
             oObj.bReduced = false;
+            $.cookie('bReduced', '0', { expires: 365, path: '/' });
+            $.cookie('bExpanded', '0', { expires: 365, path: '/' });
         }
     },
     
@@ -123,4 +132,26 @@ if($('#nChatCon').length > 0)
     });
 
     oObj.saveOriginalStyle();
+    
+    // get and set may saved values
+    var bReduced = $.cookie('bReduced');
+    var bExpanded = $.cookie('bExpanded');
+
+    switch(bReduced)
+    {
+        case '1':
+        {
+            oObj.toggleReduce();
+            break;
+        }
+    }
+    
+    switch(bExpanded)
+    {
+        case '1':
+        {
+            oObj.toggleExpand();
+            break;
+        }
+    }
 }
