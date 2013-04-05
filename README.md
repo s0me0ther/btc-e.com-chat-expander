@@ -3,12 +3,15 @@ btc-e.com-chat-expander
 
 btc-e chat expander
 
-tested @ firefox
+tested @ firefox & chrome
 
-u need the firefox addon "Greasemonkey" installed (<a href="https://www.google.ch/#q=greasemonkey">google search greasemonkey</a>)
+Firefox: u need the firefox addon "Greasemonkey" installed (<a href="https://www.google.ch/#q=greasemonkey">google search greasemonkey</a>)
+Chrome: u need the chrome addon "Tampermonkey" installed (<a href="https://www.google.ch/#q=tampermonkey">google search tampermonkey</a>)
 
-after greasemonkey is installed, install the chatbox extender via:
+after greasemonkey / tampermonkey is installed, install the chatbox extender via:
 <a href="https://github.com/sebka/btc-e.com-chat-expander/raw/master/chat_expander.user.js">install btc-e chatbox extender</a>
+
+Chrome will ask 4 install into Tampermonkey (OK), or native in Chrome - press OK, 4 install in tampermonkey - otherwise the addon will not work.
 
 free code - do what u want with it
 
