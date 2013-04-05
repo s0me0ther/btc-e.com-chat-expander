@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name        btc-e chat expander
 // @namespace   btce
-// @include     https://btc-e.com/
-// @version     1.001
+// @include     https://btc-e.com/*
+// @version     1.002
 // @grant       none
 // @require    https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @require    https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js
