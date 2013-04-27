@@ -388,8 +388,8 @@ var oTrigger = {
                         oSettings.set('ce_draggable_top', $('#ce_bar').parent().css('top'));
                     }
                 });
-                
-                $('#ce_bar').parent().css('left', oSettings.get('ce_draggable_left')).css('top', oSettings.get('ce_draggable_top'));
+
+                $('#ce_bar').parent().css('left', (oSettings.get('ce_draggable_left') || '140px')).css('top', (oSettings.get('ce_draggable_top') || '85px'));
             }
         }
     },

@@ -3,6 +3,8 @@ btc-e.com-chat-expander
 
 btc-e chat expander
 
+<a href="#bctece_changelog">Goto Changelog</a>
+
 tested @ firefox & chrome
 
 Firefox: u need the firefox addon "Greasemonkey" installed (<a href="https://www.google.ch/#q=greasemonkey">google search greasemonkey</a>)
@@ -26,3 +28,22 @@ Expanded:
 ![Expanded](https://github.com/sebka/btc-e.com-chat-expander/raw/master/expanded.png "Expanded")
 
 [![githalytics.com alpha](https://cruel-carlota.pagodabox.com/55740e22ef2b6050de6a7ab559bee9f7 "githalytics.com")](http://githalytics.com/sebka/btc-e.com-chat-expander)
+
+<div id="bctece_changelog">Changelog:</div>
+1.090
+complete new written code
+saves the chat position now
+able to block/unblock users
+able to set color for texts of users
+
+known issues right now:
+expanded not able to use user options correct
+
+on todolist:
+make resizable when enlarged
+option for opacity when enlarged
+option for smiley replacement (right now btc-e doesnt show the images)
+
+Donate if u like
+BTC:    18T2ayBngGrnadkpYeiAdBtze5jtTFAg52
+LTC:    LYvdwPSXG74NUnXFyH4tej4Xmy9jvrY9HS
