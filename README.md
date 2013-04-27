@@ -1,7 +1,7 @@
 btc-e.com-chat-expander
 =======================
 
-<a href="#bctece_changelog">Goto Changelog</a>
+<a href="#changelog">Goto Changelog</a>
 
 ### tested @ firefox & chrome
 
@@ -30,7 +30,6 @@ Expanded:
 
 --------------
 
-<div id="bctece_changelog"></div>
 ## Changelog
 ### 1.090:
 - complete new written code
