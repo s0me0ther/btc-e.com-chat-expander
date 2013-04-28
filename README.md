@@ -31,6 +31,9 @@ Expanded:
 --------------
 
 ## Changelog
+### 1.091:
+- added "Search in Archive" Button - to search userchats
+
 ### 1.090:
 - complete new written code
 - saves the chat position now

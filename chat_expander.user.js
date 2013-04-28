@@ -2,7 +2,7 @@
 // @name        btc-e chat expander
 // @namespace   btce
 // @include     https://btc-e.com/*
-// @version     1.090
+// @version     1.091
 // @grant       GM_getValue
 // @grant       GM_setValue
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
@@ -98,6 +98,7 @@ var oChat = {
         
         // insert new user options
         $('#cMenu').append(oTemplates.getHTML_UserOptions());
+        $('#cMenu').append(oTemplates.getHTML_SearchInArchive());
         $('#cMenu').append(oTemplates.getHTML_ColorPicker());
         
         // modify width of original chat
@@ -160,6 +161,12 @@ var oChat = {
             oChat.blockNewUser();
         });
         
+        // onclick search in archive
+        $('#divOptionSearchInArchive').click(function()
+        {
+            oChat.seachInArchive();
+        });
+        
         // init colorpicker
         ColorPicker($('#ce_colorpicker_slide')[0], $('#ce_colorpicker_picker')[0], function(sHex, sHsv, sRgb)
         {
@@ -210,6 +217,16 @@ var oChat = {
         {
             $('.user_' + sUserID, '#' + oChat.id).css('display', 'none');
             oBlocklist.add(sUserID);
+        }
+    },
+    
+    seachInArchive: function()
+    {
+        var sUserID = $('#cMenuH').text() || '' ;
+        
+        if($.trim(sUserID) != '')
+        {
+            window.open('http://trollboxarchive.com/search.php?search_type=username&search=' + sUserID);
         }
     },
 
@@ -470,6 +487,18 @@ var oTemplates = {
         sHTML +=    '<span>';
         sHTML +=        '<a id="divOptionBlockNewUser" class="profileBtn" style="cursor:pointer">';
         sHTML +=            'Block User';
+        sHTML +=        '</a>';
+        sHTML +=    '</span>';
+
+        return sHTML;
+    },
+
+    getHTML_SearchInArchive: function()
+    {
+        var sHTML = '';
+        sHTML +=    '<span>';
+        sHTML +=        '<a id="divOptionSearchInArchive" class="profileBtn" style="cursor:pointer">';
+        sHTML +=            'Search in Archive';
         sHTML +=        '</a>';
         sHTML +=    '</span>';
 
