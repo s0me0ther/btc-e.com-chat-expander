@@ -3,6 +3,11 @@ btc-e.com-chat-expander
 
 <a href="#changelog">Goto Changelog</a>
 
+### features
+- expand / shrink / resize the btce-chat
+- block users (their chats will not more displayed)
+- set usercolors (so u can easily track someones chat by his / her color)
+
 ### tested @ firefox & chrome
 
 Firefox: u need the firefox addon "Greasemonkey" installed (<a href="https://www.google.ch/#q=greasemonkey">google search greasemonkey</a>)
@@ -67,9 +72,9 @@ Special thanks to:
 - expanded not able to use user options correct
 
 ## todolist:
-- make resizable when enlarged
 - option for opacity when enlarged
 - option for smiley replacement (right now btc-e doesnt show the images)
+- option to reset all chat expander variables
 
 ## donate if u like
 * Bitcoin: 18T2ayBngGrnadkpYeiAdBtze5jtTFAg52
