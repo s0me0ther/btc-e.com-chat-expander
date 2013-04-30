@@ -14,16 +14,28 @@ after greasemonkey / tampermonkey is installed, install the chatbox extender via
 
 Chrome will ask 4 install into Tampermonkey (OK), or native in Chrome - press OK, 4 install in tampermonkey - otherwise the addon will not work.
 
-### examples
+### example pictures
 
 Normal:
-![Normal](https://github.com/sebka/btc-e.com-chat-expander/raw/master/normal.png "Normal")
+![Normal](https://github.com/sebka/btc-e.com-chat-expander/raw/master/normal.jpg "Normal")
 
-Shrinked:
-![Shrinked](https://github.com/sebka/btc-e.com-chat-expander/raw/master/shrinked.png "Shrinked")
+Shrinked at Dock:
+![Shrinked](https://github.com/sebka/btc-e.com-chat-expander/raw/master/shrinked_docked.jpg "Shrinked at Dock")
 
 Expanded:
-![Expanded](https://github.com/sebka/btc-e.com-chat-expander/raw/master/expanded.png "Expanded")
+![Expanded](https://github.com/sebka/btc-e.com-chat-expander/raw/master/expanded.jpg "Expanded")
+
+Shrinked Expanded:
+![Expanded](https://github.com/sebka/btc-e.com-chat-expander/raw/master/shrinked_expanded.jpg "Shrinked Expanded")
+
+Additional User Options:
+![UserOptions](https://github.com/sebka/btc-e.com-chat-expander/raw/master/user_options.jpg "Additional User Options")
+
+Local Blacklisting:
+![Blacklisting](https://github.com/sebka/btc-e.com-chat-expander/raw/master/blacklist.jpg "Additional User Options")
+
+Custom Color for each User:
+![UserColor](https://github.com/sebka/btc-e.com-chat-expander/raw/master/color.jpg "User Color")
 
 [![githalytics.com alpha](https://cruel-carlota.pagodabox.com/55740e22ef2b6050de6a7ab559bee9f7 "githalytics.com")](http://githalytics.com/sebka/btc-e.com-chat-expander)
 
@@ -33,6 +45,12 @@ Special thanks to:
 - <a href="http://trollboxarchive.com/">http://trollboxarchive.com/</a> for logging !
 
 ## Changelog
+### 1.100:
+- fixed wrong include of colorpicker css #2
+- include of jqueryuicss
+- resizable possible
+- readme.md filled with actual pictures
+
 ### 1.092:
 - fixed wrong include of colorpicker css
 
@@ -53,6 +71,6 @@ Special thanks to:
 - option for opacity when enlarged
 - option for smiley replacement (right now btc-e doesnt show the images)
 
-## Donate if u like
+## donate if u like
 * Bitcoin: 18T2ayBngGrnadkpYeiAdBtze5jtTFAg52
 * Litecoin: LYvdwPSXG74NUnXFyH4tej4Xmy9jvrY9HS
