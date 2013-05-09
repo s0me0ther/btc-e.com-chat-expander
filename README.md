@@ -50,6 +50,9 @@ Special thanks to:
 - <a href="http://trollboxarchive.com/">http://trollboxarchive.com/</a> for logging !
 
 ## Changelog
+### 1.101:
+- onclick menu on user now every time on the right position
+
 ### 1.100:
 - fixed wrong include of colorpicker css #2
 - include of jqueryuicss
@@ -69,13 +72,13 @@ Special thanks to:
 - able to set color for texts of users
 
 ## known issues
-- expanded not able to use user options correct
+create one in github to let me know!
 
 ## todolist:
 - option for opacity when enlarged
 - option for smiley replacement (right now btc-e doesnt show the images)
 - option to reset all chat expander variables
 
-## donate if u like
+## donate:
 * Bitcoin: 18T2ayBngGrnadkpYeiAdBtze5jtTFAg52
 * Litecoin: LYvdwPSXG74NUnXFyH4tej4Xmy9jvrY9HS

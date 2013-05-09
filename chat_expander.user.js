@@ -2,7 +2,7 @@
 // @name        btc-e chat expander
 // @namespace   btce
 // @include     https://btc-e.com/*
-// @version     1.100
+// @version     1.101
 // @grant       GM_getValue
 // @grant       GM_setValue
 // @grant       GM_getResourceText
@@ -218,6 +218,23 @@ var oChat = {
 
             // get username
             var sUserID = $('a', oObjP).text();
+            
+            // set new event
+            $('a', oObjP).click(function(oEvent)
+            {
+                if(oSettings.get('bEnlarged', 0) == 1)
+                {
+                    var oOffset = $('#ce_bar').parent().offset();
+    
+                    $('#cMenu').css('left', oEvent.pageX - oOffset.left + 'px');
+                    $('#cMenu').css('top', oEvent.pageY - oOffset.top + 'px');                    
+                }
+                else
+                {
+                    $('#cMenu').css('left', oEvent.pageX + 'px');
+                    $('#cMenu').css('top', oEvent.pageY + 'px');
+                }
+            });
 
             // add username into css - so we can fetch this user later simple
             $(oObjP).addClass('user_' + sUserID);
