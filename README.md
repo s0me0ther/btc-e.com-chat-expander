@@ -42,8 +42,6 @@ Local Blacklisting:
 Custom Color for each User:
 ![UserColor](https://github.com/sebka/btc-e.com-chat-expander/raw/master/color.jpg "User Color")
 
-[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/55740e22ef2b6050de6a7ab559bee9f7 "githalytics.com")](http://githalytics.com/sebka/btc-e.com-chat-expander)
-
 ---
 Special thanks to:
 
